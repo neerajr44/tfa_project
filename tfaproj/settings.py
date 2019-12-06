@@ -25,12 +25,13 @@ SECRET_KEY = 'l2)l@91shn7z*2ea$0i!r#0x&dftqgy7#udr_4xj!^5q!c5v41'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'squap.apps.SquapConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
