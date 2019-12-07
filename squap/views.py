@@ -14,6 +14,46 @@ def view_map(request):
             }
     return render( request, 'squap/map.html', context)
 
+def main_one(request):
+    squirrel='Squirrel Tracker'
+    return render(request,'squap/main.html',{'Squirrel':squirrel})
+
+def get_sighting(request):
+    squirrels=Squirrel.objects.all()
+    context={
+        'squirrels':squirrels,
+        }
+    return render(request,'squap/sighting.html',context)
+
+def update_squirrel(request,Unique_squirrel_ID):
+    squirrel=Squirrel.objects.get(id=Unique_squirrel_ID)
+    if request.method=="POST":
+        form=SquirForm(request.POST, instance=squirrel)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/sightings')
+
+    else:
+        form =SquirForm(instance=squirrel)
+    context={
+            'form':form
+        }
+    return render(request,'squap/edit.html',context)
+
+def add_new_squirrel(request):
+    if request.method=="POST":
+        form=SquirForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/sightings')
+
+    else:
+        form=SquirForm()
+    context={
+            'form':form,
+        }
+    return render(request,'squap/edit.html',context)
+
 
 def stats_page(request):
     am_count = 0
