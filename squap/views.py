@@ -26,7 +26,7 @@ def get_sighting(request):
     return render(request,'squap/sighting.html',context)
 
 def update_squirrel(request,Unique_squirrel_ID):
-    squirrel=Squirrel.objects.get(id=Unique_squirrel_ID)
+    squirrel=Squirrel.objects.get(Unique_squirrel_ID=Unique_squirrel_ID)
     if request.method=="POST":
         form=SquirForm(request.POST, instance=squirrel)
         if form.is_valid():
