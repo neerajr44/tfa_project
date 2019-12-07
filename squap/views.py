@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Squirrel
+from .forms import SquirForm
 
 """idef index(request):
     return HttpResponse("View is working well.")
@@ -12,6 +13,7 @@ def view_map(request):
             'sightings': sighting,
             }
     return render( request, 'squap/map.html', context)
+
 
 def stats_page(request):
     am_count = 0
