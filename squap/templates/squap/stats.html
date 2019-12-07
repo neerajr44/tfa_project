@@ -7,19 +7,34 @@
         </head>
         <body>
                 <p>
-                        <ul>
-                                <li> Count of Squirrels Shift:
-                                        <ul>
-                                                <li>AM: {{ AM_count }} </li>
-                                                <li>PM:  {{ PM_count  }} </li>
-                                        </ul>
-                                </li><br>
-				<li>Number of squirrels Running:  {{ squirrel_count }} </li><br>
-                                <li>Number of squirrels Running:  {{ Running_count }} </li><br>
-                                <li>Number of squirrels Foraging:  {{ Foraging_count }} </li><br>
-                                <li>Number of squirrels Approaching:  {{  Approaches_count  }} </li><br>
-                                <li> Number of squirrels moaning:  {{Moans_count  }} </li><br>
-                        </ul>
+			<table style="width:100%">
+  				<tr>
+   			 		<th>Statistic</th>
+   			                <th>Count</th> 
+ 			        </tr>
+ 				 <tr>
+   					 <td>Total Squirrels</td>
+					 <td>{{ squirrel_count }}</td> 
+ 				 </tr>
+ 				 <tr>
+   					 <td>Eating squirrels</td>
+					 <td>{{ Eating_count }}</td> 
+ 				 </tr>
+				 <tr>
+					 <td>Moaning squirrels</td>
+					 <td>{{ Moans_count }}</td>
+				 </tr>
+				 <tr>
+					 <td>Running squirrels</td>
+					 <td>{{ Running_count }}</td>
+				 </tr>
+				 <tr>
+					 <td>Climbing squirrels</td>
+					 <td>{{ Climbing_count }}</td>
+				</tr>
+
+
+			</table>
                 </p>
         </body>
 </html>
