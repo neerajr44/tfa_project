@@ -5,11 +5,15 @@ basic web application which plots squirrels as pins on the map and sightings to 
 about squirrel sighting.
 
 Tabs as below:
-Main Page:
-      Map View:
-       "You will a map here with pins depicting the positions of squirrels"
+
+
+    Main Page:
        
-       Sighting View:
+       
+        Map View:
+          "You will a map here with pins depicting the positions of squirrels"
+       
+        Sighting View:
        
         Link 1: General Stats about Squirrel Data 
                  (as the name goes!)
