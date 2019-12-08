@@ -14,7 +14,7 @@ Tabs as below:
        
        
         Map View:
-          "You will a map here with pins depicting the positions of squirrels"
+          "You will see a map here with pins depicting the positions of squirrels"
        
         Sighting View:
        
