@@ -52,13 +52,13 @@ class Squirrel(models.Model):
 
 
     Shift = models.CharField(
-            help_text=_('Indication whether the sighting occurred in the afterrnoon or evening'),
+            help_text=_('Was suirrel seen during the afterrnoon or during the evening?'),
             max_length=10,
             choices=TIME_CHOICES,
             blank = True,
         )
     Date = models.IntegerField(
-            help_text=_('Date of the sighting'),
+            help_text=_('Date of sighting'),
             null = True,
             blank = True,
         )
@@ -70,14 +70,14 @@ class Squirrel(models.Model):
         )
 
     Age = models.CharField(
-            help_text=_('Value is either Adult or Juvenile'),
+            help_text=_('Choose among Adult or Juvenile'),
             max_length=15,
             choices=AGE_CHOICES,
             blank=True,
         )
 
     Primary_Fur_Color = models.CharField(
-            help_text=_('Value is either gray, cinnamon or black'),
+            help_text=_('Choose among gray, cinnamon or black'),
             max_length = 10,
             choices = COLOR_CHOICES,
             blank = True,
@@ -100,7 +100,7 @@ class Squirrel(models.Model):
         )
 
     Specific_Location = models.CharField(
-            help_text=_('Additional commentary on the squirrel location'),
+            help_text=_('Add comments on the squirrel location'),
             blank = True,
             max_length = 100,
         )
@@ -111,11 +111,11 @@ class Squirrel(models.Model):
         )
 
     Chasing = models.BooleanField(
-            help_text=_('True if squirrel was seen chasing;otherwise False'),
+            help_text=_('True if squirrel was seen chasing; otherwise False'),
             default=False,
          )
     Climbing = models.BooleanField(
-            help_text=_('True if Squirrel was seen climbing;otherwise False'),
+            help_text=_('True if Squirrel was seen climbing; otherwise False'),
             default=False,
         )
     Eating = models.BooleanField(
@@ -135,7 +135,7 @@ class Squirrel(models.Model):
         )
 
     Kuks = models.BooleanField(
-            help_text=_('True if the Squirrel is kuking,a chirpy voice communication; otherwise False'),
+            help_text=_('True if the Squirrel is kuking,a chirpy voice; otherwise False'),
             default=False,
         )
 
