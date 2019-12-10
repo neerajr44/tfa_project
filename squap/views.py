@@ -8,7 +8,7 @@ from .forms import SquirForm
 """
 
 def view_map(request):
-    sighting = Squirrel.objects.all()[:25]
+    sighting = Squirrel.objects.all()[:100]
     context = {
             'sightings': sighting,
             }

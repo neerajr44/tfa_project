@@ -2,26 +2,24 @@
 <!doctype>
 <html>
         <head>
-                <title> This is the Sightings view </title>
-                <p><a href = '/'> Back to main page </a></p>
-                <h1> This is the Sightings view </h1>
+		<p><i><a href = '/'> Main page </a</i>></p>
+                <h1> Sighting details</h1>
         </head>
         <body>
-                <h2> Click below to view statistics:</h2>
-                <ul>
+                <h2>statistics page</h2>
+                <ol>
                         <li><p> <a href = '/sightings/stats'> Generel Stats about squirrel Data </a></p></li>
-                </ul>
-                <h2> Click below to add a new squirrel:</h2>
-                <ul>
+                </ol>
+                <ol>
                         <li><p> <a href = '/sightings/add'> Add New Sighting </a> </p></li>
-                </ul>
-                <h2> Click on the squirrel ID to update the Entry:</h2>
+                </ol>
+                <h2> Click to edit:</h2>
                 <p>
-                        <ul>
+                        <ol>
                                 {% for squirrel in squirrels %}
 				<li><a href = '/sightings/{{ squirrel.Unique_squirrel_ID}}'>{{squirrel.Unique_squirrel_ID}}</a></li>
                                 {% endfor %}
-                        </ul>
+                        </ol>
                 </p>
         </body>
 </html> 

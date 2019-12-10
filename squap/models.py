@@ -37,14 +37,14 @@ class Squirrel(models.Model):
 
 
     X = models.DecimalField(
-            help_text=_('Longitutde of sighting'),
+            help_text=_('sighting Longitude'),
             max_digits=20,
             decimal_places=15,
             blank = True,
         )
 
     Y = models.DecimalField(
-            help_text=_('Latitude of sighting'),
+            help_text=_('sighting Latitude'),
             max_digits =20,
             decimal_places = 15,
             blank = True,
@@ -52,7 +52,7 @@ class Squirrel(models.Model):
 
 
     Shift = models.CharField(
-            help_text=_('Was suirrel seen during the afterrnoon or during the evening?'),
+            help_text=_('Which time of the day was squirrel seen - Morning (AM) or Evening (PM)'),
             max_length=10,
             choices=TIME_CHOICES,
             blank = True,
@@ -70,7 +70,7 @@ class Squirrel(models.Model):
         )
 
     Age = models.CharField(
-            help_text=_('Choose among Adult or Juvenile'),
+            help_text=_('Was it  Adult or Juvenile'),
             max_length=15,
             choices=AGE_CHOICES,
             blank=True,
@@ -93,84 +93,84 @@ class Squirrel(models.Model):
         )
 
     Location = models.CharField(
-            help_text=_('Either ground plane or above ground depending on where the sighters located the squirrel'),
+            help_text=_('Was it loccated on ground plane or above ground'),
             choices = LOCATION,
             blank = True,
             max_length = 20,
         )
 
     Specific_Location = models.CharField(
-            help_text=_('Add comments on the squirrel location'),
+            help_text=_('Any additional comments on the squirrel location?'),
             blank = True,
             max_length = 100,
         )
 
     Running = models.BooleanField(
-            help_text=_('True if squirrel seen running; otherwise False'),
+            help_text=_('Was squirrel seen running; Then True'),
             default=False,
         )
 
     Chasing = models.BooleanField(
-            help_text=_('True if squirrel was seen chasing; otherwise False'),
+            help_text=_('Was squirrel seen chasing; Then True'),
             default=False,
          )
     Climbing = models.BooleanField(
-            help_text=_('True if Squirrel was seen climbing; otherwise False'),
+            help_text=_('Was squirrel seen climbing; Then True'),
             default=False,
         )
     Eating = models.BooleanField(
-            help_text=_('True if Squirrel is Eating; otherwise False'),
+            help_text=_('Was squirrel seen Eating; Then True'),
             default=False,
         )
 
     Foraging = models.BooleanField(
-            help_text=_('True if Squirrel is Foraging; otherwise False'),
+            help_text=_('Was Squirrel seen  Foraging; Then True'),
             default=False,
         )
 
     Other_Activities = models.CharField(
-            help_text=_('Activity the Squirrel is performing'),
+            help_text=_('Activity the Squirrel was performing'),
             blank=True,
             max_length = 100,
         )
 
     Kuks = models.BooleanField(
-            help_text=_('True if the Squirrel is kuking,a chirpy voice; otherwise False'),
+            help_text=_('Was Squirrel seen kuking with a chirpy voice; if no then False'),
             default=False,
         )
 
 
     Quaas = models.BooleanField(
-            help_text=_('True if the Squirrel is Quaaing,an elongated vocal call; otherwise False'),
+            help_text=_('Was Squirrel seen Quaaing,an elongated vocal call; if no then False'),
             default=False,
         )
 
     Moans = models.BooleanField(
-            help_text=_('True if the Squirrel is Moaning,a high pitched vocal communication; otherwise False'),
+            help_text=_('Was Squirrel seen Moaning,a high pitched voice; if no then False'),
             default=False,
         )
 
     Tail_flags = models.BooleanField(
-            help_text=_('True if the Squirrel is flagging its tail; otherwise False'),
+            help_text=_('Was Squirrel seen flagging its tail; if no then False'),
             default=False,
         )
 
     Tail_twitching = models.BooleanField(
-            help_text=_('True if the Squirrel is twitching its tail; otherwise False'),
+            help_text=_('Was Squirrel seen twitching its tail; if no then False'),
             default=False,
         )
 
     Approaches = models.BooleanField(
-        help_text=_('True if the Squirrel is seen approaching human;otherwise False'),
+        help_text=_('Was Squirrel seen approaching human;if no then False'),
         default=False,
         )
 
     Indifferent = models.BooleanField(
-            help_text=_('True if squirrel was indifferent to Human; otherwise False'),
+            help_text=_('Was squirrel indifferent to Human; if no then False'),
             default=False,
         )
     Runs_from = models.BooleanField(
-            help_text=_('True if Squirrel was seen running from humans; otherwise false'),
+            help_text=_('Was Squirrel seen running from humans; if no then False'),
             default=False,
         )
 
